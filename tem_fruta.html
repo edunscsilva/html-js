@@ -1,0 +1,44 @@
+<meta charset="utf-8">
+
+<script type="text/javascript">
+	
+	function pulaLinha() {
+
+		document.write("<br>");	
+	}
+
+	function mostra(frase) {
+
+		document.write(frase);
+		pulaLinha();
+	}
+
+	function verifica(temFruta) {
+
+		var achou = false;
+		var frutas=["banana","maçã","pêssego","tomate","uva"];
+
+		
+
+		for(var posicao = 0; posicao < frutas.length; posicao++) {
+
+			if(temFruta == frutas[posicao]) {
+
+				mostra("Opa, temos " + temFruta + " hoje. Chega ai comprar conois!");
+				achou = true;
+				break;
+			}
+		}
+
+		if(achou == false) {
+
+			mostra("Ahhh, infelizmente não temos " + temFruta + " hoje...Sinto muito!");	
+		}	
+	}
+
+
+	var temFruta = prompt("Bem vindo ao Mercado Ypê. Qual fruta você vai querer comprar hoje?");
+	verifica(temFruta);
+
+
+</script>
